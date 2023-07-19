@@ -1,9 +1,11 @@
 import React from 'react';
 import '../App.css';
 import { useEffect, useState } from 'react';
-import AndrewCard from './AndrewCard'
-import ProjectContainer from './ProjectContainer'
+import AndrewCard from './AndrewCard';
+import ProjectContainer from './ProjectContainer';
+import Navbar from './Navbar';
 import { Route } from 'react-router-dom';
+import AuthenticatedUser from './AuthenticatedUser';
 
 
 
@@ -43,13 +45,21 @@ function App() {
   return (
     <div className="App">
 
-      <Route path="/andrews">
-            <AndrewCard andrew={andrew} setAndrew={setAndrew} />
-      </Route >
+      <Navbar />
 
-      <Route path="/projects">
+        <Route path="/andrews">
+            <AndrewCard andrew={andrew} setAndrew={setAndrew} />
+        </Route >
+
+        <Route path="/projects">
             <ProjectContainer projects={projects} setProjects={setProjects} />
-      </Route >
+        </Route >
+
+        <Route path="/authenticated_user">
+               <AuthenticatedUser /> 
+        </Route>
+
+      
 
 
 
