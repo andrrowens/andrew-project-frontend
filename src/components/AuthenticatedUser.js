@@ -28,7 +28,7 @@ const handleSubmit = (e) => {
               return user
           }).then((user) => history.push(`/users/${user.id}`))
       }else {
-          res.json().then(json => setErrors(Object.entries(json.errors)))
+          // res.json().then(json => setErrors(Object.entries(json.errors)))
       }
   })
 }
