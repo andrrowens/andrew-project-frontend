@@ -5,8 +5,7 @@ import AndrewCard from './AndrewCard';
 import ProjectContainer from './ProjectContainer';
 import Navbar from './Navbar';
 import { Route } from 'react-router-dom';
-// import { useContext } from 'react'
-// import { UserContext } from '../context/UserContext'
+import AuthenticatedUser from './AuthenticatedUser';
 
 
 
@@ -55,6 +54,12 @@ function App() {
         <Route path="/projects">
             <ProjectContainer projects={projects} setProjects={setProjects} />
         </Route >
+
+        <Route path="/authenticated_user">
+               <AuthenticatedUser /> 
+        </Route>
+
+      
 
 
 
